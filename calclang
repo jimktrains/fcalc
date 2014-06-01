@@ -21,13 +21,21 @@ NBR
 <SC
 
 TYP (Type of the first thing on the stack)
-SIZ (Size of VEC and MAT types)
+CARD (Size of VEC and MAT types)
+MAG (Magnitude)
 
 RND
 PM (inverts sign / additive inverse)
 
-VEC s_(m+1) .. s_2 m -- v
-MAT s_(mn+2) .. s_3 m n
+CPLX r i -- c (creates a complex number)
+RAT top bottom -- r (creates a rational number)
+MRAT whole top bottom -- r (creates a mixed rational)
+VEC m s_2 .. s_(m+1) -- v
+MAT m n s_3 .. s_(mn+2) -- m n
+
+DATE Y M D -- d (creates a date)
+DINV Y D -- i (creates an interval (years are defined as 365.25 days)
+TINV H M S -- i (creats an interval, can be added to date intervals)
 
 ADD
 SUB
@@ -48,7 +56,15 @@ PHI
 NA
 CONST (Takes an arg for the build in lookup table)
 
-UNIT (Takes 2 args to do a lookup from)
+CONV (Takes 2 args (units) to do a conversion lookup from)
+
+ROUNDU (round up)
+  ROUND
+ROUNDD (round down)
+ROUNDI (round towards +/-infinity)
+ROUNDZ (round towards zero)
+ROUNDE (round to even(bankers rounding))
+ROUNDO (round to odd)
 
 POW
 POW2
