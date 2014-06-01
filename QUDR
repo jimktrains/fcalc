@@ -1,0 +1,55 @@
+\ Computes the Quadratic roots
+\ Expects A B and C to be on the stack
+\ A at the top
+
+:QUDR
+
+DUP
+\ A A B C
+
+3
+ROL
+\ C A B A
+MUL
+3
+MUL
+\ 4AC B A
+
+SWP
+DUP
+SWP
+\ B 4AC B A
+
+POW2
+SUB
+SWP
+PM
+\ -B Det A
+
+DUP
+ROT
+DUP
+\ Det Det -B -B A
+
+ROT
+\ -B Det Det -B A
+
+ADD
+\ -B+Det Det -B A
+
+ROT
+SUB
+\ -B-Det -B+Det A
+
+VEC
+\ [-B-Det -B+Det] A
+
+SWP
+2
+MUL
+SWP
+DIV
+
+\[-B-Det/2A -B+Det/2A]
+
+;

@@ -1,0 +1,80 @@
+:; (Define word)
+\ comment
+> push onto stack
+
+
+. (Print top of stack)
+DRP
+ROL
+  SWAP
+  ROT
+DUP
+
+ZBR
+NBR
+
+>IB (set Input Base)
+<IB 
+>OB (set Output Base)
+<OB
+>SC (output scale)
+<SC
+
+TYP (Type of the first thing on the stack)
+SIZ (Size of VEC and MAT types)
+
+RND
+
+VEC s_(m+1) .. s_2 m -- v
+MAT s_(mn+2) .. s_3 m n
+
+ADD
+SUB
+MUL
+DIV
+MOD
+ABS
+DOT (only for vectors)
+
+INV
+FAC
+NCR
+NPR
+
+PI
+E
+PHI
+NA
+CONST (Takes an arg for the build in lookup table)
+
+UNIT (Takes 2 args to do a lookup from)
+
+POW
+POW2
+POW3
+MODPOW
+LOG
+ROOT
+ROOT2
+ROOT3
+LN
+LN1
+EXP
+EXP1
+LG (Log base 2)
+EG (2^x)
+
+TMD (Trig Mode: #DEG #RAD #GRAD #POLAR) (#POLAR only for inverse)
+SIN
+COS
+TAN
+ASIN
+ACOS
+ATAN
+SINH
+COSH
+TANN
+ASINH
+ACOSH
+ATANN
+
