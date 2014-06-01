@@ -2,6 +2,10 @@
 \ Expects A B and C to be on the stack
 \ A at the top
 
+\ Yes, I could make it return 2 values on the stack
+\ but I'm showing off vectors in this example:)
+\ QUDR C B A -- [root1 root2]
+
 :QUDR
 
 DUP
