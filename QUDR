@@ -39,10 +39,11 @@ ADD
 
 ROT
 SUB
-\ -B-Det -B+Det A
+SWP
+\ -B+Det -B-Det A
 
 VEC
-\ [-B-Det -B+Det] A
+\ [-B+Det -B-Det] A
 
 SWP
 2
@@ -50,6 +51,6 @@ MUL
 SWP
 DIV
 
-\[-B-Det/2A -B+Det/2A]
+\ [-B+Det/2A -B-Det/2A]
 
 ;
