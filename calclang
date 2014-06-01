@@ -24,6 +24,7 @@ TYP (Type of the first thing on the stack)
 SIZ (Size of VEC and MAT types)
 
 RND
+PM (inverts sign / additive inverse)
 
 VEC s_(m+1) .. s_2 m -- v
 MAT s_(mn+2) .. s_3 m n
@@ -36,7 +37,7 @@ MOD
 ABS
 DOT (only for vectors)
 
-INV
+INV (Multiplicative inverse)
 FAC
 NCR
 NPR
