@@ -4,7 +4,7 @@
 
 \ Yes, I could make it return 2 values on the stack
 \ but I'm showing off vectors in this example:)
-\ QUDR C B A -- [root1 root2]
+\ QUDR A B C -- [root1 root2]
 
 :QUDR
 
