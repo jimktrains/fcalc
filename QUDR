@@ -22,6 +22,9 @@ SWP
 
 POW2
 SUB
+SQRT
+\ SQRT(B2-4AC) B A
+
 SWP
 PM
 \ -B Det A
