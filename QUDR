@@ -15,7 +15,7 @@ DUP
 ROL
 \ C A B A
 MUL
-3
+4
 MUL
 \ 4AC B A
 
