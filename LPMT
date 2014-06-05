@@ -1,0 +1,38 @@
+\ Monthly payment calculator
+\ LPMT P J N -- M
+\   P Principle
+\   J APR
+\   N Months
+
+:LPMNT
+
+swap
+100
+DIV
+\ Converts the APY to a monthly rate
+\ JM P N
+
+DUP
+3
+ROL
+SWP
+\ JM N  P JM
+
+1
+ADD
+POW
+\ (1+JM)^(N) P JM
+1
+SWP
+SUB
+\ ((1+JM)^(N)-1) P JM
+
+ROT
+SWP
+DIV
+\ (JM/((1+JM)^(N)-1)) P
+
+MUL
+\ (P*(JM/((1+JM)^(N)-1)))
+
+;
