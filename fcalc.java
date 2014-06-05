@@ -30,7 +30,11 @@ class SODouble implements StackObj {
 }
 
 interface Executable {
+  // List of argument types in the order they will be popped off the stack
+  // before execution
   int[] args();
+  // List of return types in the order they will be pushed on to the stack
+  // after execution
   int[] rets();
   StackObj[] run(StackObj[] so);
 }
